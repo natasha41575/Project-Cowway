@@ -14,3 +14,21 @@ Behavior:
 •	If hungriness level reaches 100 or age reaches 90001, the cow dies and is removed from the farm.
 •	Cow has a (0.0001*age*sicknessLevel)% chance of dying each hour. Dead cows are removed from the farm.
 */
+public class Cow implements FarmObject{
+  private String name;
+  private int hungriness;
+  private int age;
+  private int sicknessLevel;
+  private int x;
+  private int y;
+  
+  public Cow(String name, int hungriness, int age, int sicknessLevel, int x, int y){
+    this.name = name;
+    this.hungriness = hungriness;
+    this.age = age;
+    this.sicknessLevel = sicknessLevel;
+    this.x = x;
+    this.y = y;
+    
+  
+  
