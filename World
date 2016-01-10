@@ -1,5 +1,6 @@
 /*World (object)
 •	contains an array of all the farms in the world
 •	int representing the current time in hours
-•	method for incrementing the time by one hour
+•	method for incrementing the time by one hour 
+  *** FOR THIS MAKE SURE THE METHOD HAS THIS STATEMENT AT THE END: if (t == 25) t = 0; ****
 */
