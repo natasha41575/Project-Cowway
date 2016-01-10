@@ -1,0 +1,5 @@
+/*World (object)
+•	contains an array of all the farms in the world
+•	int representing the current time in hours
+•	method for incrementing the time by one hour
+*/
