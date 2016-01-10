@@ -1,0 +1,4 @@
+/*PoisonedGrass extends Grass
+•	The amount of poisoned grass increases by 2 every hour instead of 1.
+•	If a cow eats poisoned grass, it becomes sick, with sickness level equal to the amount of poisoned grass eaten.
+*/
