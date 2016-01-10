@@ -1,1 +1,4 @@
-
+/*Farm (Object)
+•	contains a 2D array of FarmObject objects representing the coordinate grid of the farm (empty squares represented by a null object)
+•	contains an array of FarmObject objects representing all the existing FarmObject objects
+*/
