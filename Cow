@@ -30,5 +30,16 @@ public class Cow implements FarmObject{
     this.x = x;
     this.y = y;
     
+  public void doStuffForAnHour(int hour){
+    if(checkTime(hour)){
+      move;
+    }
+    hungriness += 2;
+    age++;
+    if (hungriness >= 100 || age > = 90001){
+      remove;
+    }
+  }
+    
   
   
