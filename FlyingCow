@@ -1,0 +1,3 @@
+/*FlyingCow extends Cow
+•	Moves to a random square (not occupied by a cow) on the farm every hour
+*/
