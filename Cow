@@ -1,0 +1,16 @@
+/*Cow implements FarmObject
+Fields
+•	String for name
+•	int for level of hungriness
+•	int for age
+•	int sicknessLevel
+
+Behavior:
+•	From 6AM to 6PM, a cow traverses one square in a random direction each hour. 
+•	If the chosen square is occupied by something that is not grass or the cow would go off the grid, do nothing for that hour.
+•	At any other time, the cow is asleep, and does nothing.
+•	If the cow attempts to move to a square filled with grass, the grass is removed, the cow’s hungriness decreases by the amount of grass, and the cow moves to the square.
+•	Every hour, the cow's hungriness level increases by 2 and age by 1.	
+•	If hungriness level reaches 100 or age reaches 90001, the cow dies and is removed from the farm.
+•	Cow has a (0.0001*age*sicknessLevel)% chance of dying each hour. Dead cows are removed from the farm.
+*/
