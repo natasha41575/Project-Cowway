@@ -1,0 +1,3 @@
+/*NocturnalCow extends Cow
+•	Moves at night instead of at day (6PM to 6AM) and is asleep at any other time (does nothing)
+*/
