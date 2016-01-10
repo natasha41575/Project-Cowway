@@ -1,0 +1,5 @@
+/*FarmObject (abstract):
+•	contains ints for x and y coordinates on the farm
+•	contains an abstract method doStuffForAnHour(int hour)
+•	contains method for removing object from the farm
+*/
