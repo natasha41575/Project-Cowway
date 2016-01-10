@@ -1,0 +1,5 @@
+/*Grass extends FarmObject
+•	int for amount of grass
+•	Every hour, the amount of grass increases by 1.
+•	Every hour, has a 0.1*(amount of grass)% chance of creating another patch of grass in a random adjacent square that is not occupied by a cow (up/down/left/right). 
+*/
