@@ -4,4 +4,17 @@
 •	Every hour, has a 0.1*(amount of grass)% chance of creating another patch of grass in a random adjacent square that is not occupied by a cow (up/down/left/right). 
 */
 
+import java.util.*;
 public class Grass extends FarmObject{
+	private int GrassNum;
+		public void Increase(){
+			if( some method from the World class to show that one hour has passed){
+			GrassNum++;
+			}
+		}
+		public void RandomGrass(){
+			Random r = new Random();
+			int x = r.nextInt();
+			int y = r.nextInt();
+			if()
+		}
