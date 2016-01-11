@@ -2,3 +2,9 @@
 •	The amount of poisoned grass increases by 2 every hour instead of 1.
 •	If a cow eats poisoned grass, it becomes sick, with sickness level equal to the amount of poisoned grass eaten.
 */
+
+public class PoisonedGrass extends Grass{
+  private int PoisonedGrass;
+  public void increase(){
+    PoisonedGrass++
+    }
