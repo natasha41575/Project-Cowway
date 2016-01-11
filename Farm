@@ -2,3 +2,24 @@
 •	contains a 2D array of FarmObject objects representing the coordinate grid of the farm (empty squares represented by a null object)
 •	contains an array of FarmObject objects representing all the existing FarmObject objects
 */
+
+public class Farm extends World{
+
+  private int xcmax, ycmax;
+  private FarmObject[][] coordinateGrid;
+  private FarmObject[] farmObjects;
+  
+  public Farm(int xcmax; int yxmax;){
+    this.xcmax = xcmax;
+    this.ycmax = ycmax;
+    coodinateGrid = new FarmObject[xcmax][ycmax];
+    farmObjects = new FarmObject[xcmax * yxmax]; //total number of objects has to be less than the amount of space available
+  }
+  
+  public void placeObject(FarmObject object){
+    coordinateGrid[object.getX][object.getY] = object;
+  }  
+  
+    
+    
+    
