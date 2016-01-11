@@ -75,9 +75,13 @@ public class Cow implements FarmObject{
   }
   
   public void dealWithGrass(Farm a){
-    if (a[x][y].instanceof Grass){
-      grass.remove();
-      hungriness 
+    if (a[x][y].instanceof Grass && !a[x][y].instanceof PoisonedGrass){
+      a[x][y].remove();
+      hungriness -= grass.getAmount();
+    }
+    else if (a[x][y].instanceof PoisonedGrass){
+      a[x][y]
+      
   
   public void remove(Farm a){
     a[x][y] = null;
