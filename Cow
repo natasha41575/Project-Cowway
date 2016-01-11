@@ -33,17 +33,17 @@ public class Cow implements FarmObject{
     this.x = x;
     this.y = y;
     
-  public void doStuffForAnHour(int hour, Farm a){
+  public void doStuffForAnHour(int hour, Farm a, Cow cow){
     if(checkTime(hour)){
       move(a);
     }
     hungriness += 2;
     age++;
-    if (hungriness >= 100 || age > = 90001){
-      remove(a);
+    if (hungriness >= 100 || age >= 90001){
+      cow.remove(a);
     }
-    if (checkSickness){
-      remove(a);
+    if (checkSickness()){
+      cow.remove(a);
   }
   
   public boolean checkTime(int hour){
@@ -76,6 +76,18 @@ public class Cow implements FarmObject{
     }
   }
   
+  public boolean checkSickness(){
+    int chance = 0.0001*age*sicknessLevel;
+    Random rand = new Random();
+    int x = rand.nextInt(100);
+    if (chance > x){ 
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  
   public void dealWithGrass(Farm a){
     if (a[x][y].instanceof Grass && !a[x][y].instanceof PoisonedGrass){
       a[x][y].remove();
@@ -86,16 +98,7 @@ public class Cow implements FarmObject{
       sicknessLevel = a[x][y].getAmount();
     }
   
-  public static void remove(Farm a){
+  public void remove(Farm a){
     a[x][y] = null;
   }
-  
-  public void remove(Farm a
 }
-    
-    
-    
-    
-    
-  
-  
