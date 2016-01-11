@@ -42,6 +42,8 @@ public class Cow implements FarmObject{
     if (hungriness >= 100 || age > = 90001){
       remove(a);
     }
+    if (checkSickness){
+      remove(a);
   }
   
   public boolean checkTime(int hour){
@@ -53,7 +55,7 @@ public class Cow implements FarmObject{
     }
   }
   
-  public void move(Farm a){
+  public static void move(Farm a){
     changeCoordinates(a);
   }
   
@@ -77,15 +79,18 @@ public class Cow implements FarmObject{
   public void dealWithGrass(Farm a){
     if (a[x][y].instanceof Grass && !a[x][y].instanceof PoisonedGrass){
       a[x][y].remove();
-      hungriness -= grass.getAmount();
+      hungriness -= a[x][y].getAmount();
     }
     else if (a[x][y].instanceof PoisonedGrass){
-      a[x][y]
-      
+      a[x][y].remove();
+      sicknessLevel = a[x][y].getAmount();
+    }
   
-  public void remove(Farm a){
+  public static void remove(Farm a){
     a[x][y] = null;
   }
+  
+  public void remove(Farm a
 }
     
     
