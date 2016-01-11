@@ -2,5 +2,23 @@
 •	contains an array of all the farms in the world
 •	int representing the current time in hours
 •	method for incrementing the time by one hour 
-  *** FOR THIS MAKE SURE THE METHOD HAS THIS STATEMENT AT THE END: if (t == 25) t = 0; ****
+  *** FOR THIS MAKE SURE THE METHOD HAS THIS STATEMENT AT THE END: if (t == 24) t = 0; ****
 */
+
+public class World{
+
+ Farm[] allFarms;
+ int hours; //time in hours => (military time, 12am = 0, 1am = 2 etc)
+
+ public World(int numberOfFarms; int currentTime){
+  this.hours = currentTime;
+  allFarms = new Farm[numberOfFarms];
+ }
+ 
+ public void incrementTime(){
+  hours++;
+  if (hours == 24){
+   hours = 0;
+  }
+ }
+}
