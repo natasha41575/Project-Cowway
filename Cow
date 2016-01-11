@@ -56,10 +56,6 @@ public class Cow implements FarmObject{
   }
   
   public static void move(Farm a){
-    changeCoordinates(a);
-  }
-  
-  public void changeCoordinates(a){
     int newx = x;
     int newy = y;
     Random rand = new Random();
