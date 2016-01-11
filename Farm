@@ -6,10 +6,12 @@
 public class Farm extends World{
 
   private int xcmax, ycmax;
+  private int count;
   private FarmObject[][] coordinateGrid;
   private FarmObject[] farmObjects;
   
   public Farm(int xcmax; int yxmax;){
+    count = 0;
     this.xcmax = xcmax;
     this.ycmax = ycmax;
     coodinateGrid = new FarmObject[xcmax][ycmax];
@@ -18,7 +20,9 @@ public class Farm extends World{
   
   public void placeObject(FarmObject object){
     coordinateGrid[object.getX][object.getY] = object;
+    farmObjects[count] = object;
   }  
+}
   
     
     
