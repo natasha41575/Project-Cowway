@@ -3,3 +3,9 @@
 •	contains an abstract method doStuffForAnHour(int hour)
 •	contains method for removing object from the farm
 */
+
+public abstract class FarmObject extends Farm{
+  int x, y;
+  abstract void doStuffForAnHour();
+  abstract void remove();
+}
