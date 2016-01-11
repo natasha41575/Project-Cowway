@@ -14,6 +14,9 @@ Behavior:
 •	If hungriness level reaches 100 or age reaches 90001, the cow dies and is removed from the farm.
 •	Cow has a (0.0001*age*sicknessLevel)% chance of dying each hour. Dead cows are removed from the farm.
 */
+
+import java.util.*;
+
 public class Cow implements FarmObject{
   private String name;
   private int hungriness;
@@ -30,16 +33,60 @@ public class Cow implements FarmObject{
     this.x = x;
     this.y = y;
     
-  public void doStuffForAnHour(int hour){
+  public void doStuffForAnHour(int hour, Farm a){
     if(checkTime(hour)){
-      move;
+      move(a);
     }
     hungriness += 2;
     age++;
     if (hungriness >= 100 || age > = 90001){
-      remove;
+      remove(a);
     }
   }
+  
+  public boolean checkTime(int hour){
+    if (hour > 6 && hour < 18){
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  
+  public void move(Farm a){
+    changeCoordinates(a);
+  }
+  
+  public void changeCoordinates(a){
+    int newx = x;
+    int newy = y;
+    Random rand = new Random();
+    int randomNum = rand.nextInt(3);
+    if (randomNum == 0) newx++;
+      else if (randomNum == 1) newx--;
+      else if (randomNum == 2) newy++;
+      else newy--;
+    if (newx !> xmax && newy !> ymax && !a[x][y].instanceof Cow){
+      dealWithGrass(a);
+      x = newx;
+      y = newy;
+      a[x][y] = a.placeObject(x, y);
+    }
+  }
+  
+  public void dealWithGrass(Farm a){
+    if (a[x][y].instanceof Grass){
+      grass.remove();
+      hungriness 
+  
+  public void remove(Farm a){
+    a[x][y] = null;
+  }
+}
+    
+    
+    
+    
     
   
   
