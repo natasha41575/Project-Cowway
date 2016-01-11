@@ -5,7 +5,7 @@
 */
 
 public abstract class FarmObject extends Farm{
-  int x, y;
+  private int x, y;
   abstract void doStuffForAnHour();
   abstract void remove();
 }
