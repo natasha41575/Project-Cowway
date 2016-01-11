@@ -14,7 +14,7 @@ public class Grass extends FarmObject{
 		}
 		public void RandomGrass(){
 			Random r = new Random();
-			int x = r.nextInt();
-			int y = r.nextInt();
+			int x = r.nextInt(25);
+			int y = r.nextInt(25);
 			if()
 		}
