@@ -6,3 +6,10 @@ public class NocturnalCow extends Cow{
 
   public boolean checkTime(){
     if (hours < 6 && hours > 18){
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+}
