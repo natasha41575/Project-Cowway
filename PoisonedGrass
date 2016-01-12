@@ -4,7 +4,11 @@
 */
 
 public class PoisonedGrass extends Grass{
-  private int PoisonedGrass;
+  private int amount;
   public void increase(){
-    PoisonedGrass++;
+    if (hourIncremented()){
+    amount++;
+    amount++;
     }
+  }
+}
