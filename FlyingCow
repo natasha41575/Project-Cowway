@@ -3,7 +3,7 @@
 */
 import java.util.io*;
 public class FlyingCow extends Cow{
-  public static void move(Farm a){
+  public void move(Farm a){
     int newx = x;
     int newy = y;
     //randomly chooses a spot on the grid and overrides move method from Cow class
