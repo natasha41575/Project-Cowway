@@ -1,3 +1,15 @@
 /*FlyingCow extends Cow
 •	Moves to a random square (not occupied by a cow) on the farm every hour
 */
+
+import java.util.*;
+
+public class FlyingCow extends Cow{
+  public void move(Farm a, Cow cow){
+    Random rand = new Random();
+    this.x = rand.nextInt(xcmax);
+    this.y = rand.nextInt(ycmax);
+    a[x][y] = cow;
+  }
+}
+    
