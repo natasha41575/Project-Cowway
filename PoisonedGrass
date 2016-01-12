@@ -5,7 +5,7 @@
 
 public class PoisonedGrass extends Grass{
   private int amount;
-  public void increase(){
+  public void doStuffForAnHour(){
     if (hourIncremented()){
     amount++;
     amount++;
