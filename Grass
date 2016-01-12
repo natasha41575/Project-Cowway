@@ -6,15 +6,18 @@
 
 import java.util.*;
 public class Grass extends FarmObject{
-	private int GrassNum;
-		public void Increase(){
-			if(hourIncremented()){
-			GrassNum++;
-			}
+	private int amount;
+	public void doStuffForAnHour(){
+		amount++;
+	}
+	
+	public void RandomGrass(){
+		Random r = new Random();
+		int x = r.nextInt(25);
+		int y = r.nextInt(25);
+		if()
 		}
-		public void RandomGrass(){
-			Random r = new Random();
-			int x = r.nextInt(25);
-			int y = r.nextInt(25);
-			if()
-		}
+		
+	public int getAmount(){
+		return amount;
+	}
