@@ -1,15 +1,22 @@
 /*FlyingCow extends Cow
 •	Moves to a random square (not occupied by a cow) on the farm every hour
 */
-
-import java.util.*;
-
+import java.util.io*;
 public class FlyingCow extends Cow{
-  public void move(Farm a, Cow cow){
+  public static void move(Farm a){
+    int newx = x;
+    int newy = y;
+    //randomly chooses a spot on the grid and overrides move method from Cow class
     Random rand = new Random();
-    this.x = rand.nextInt(xcmax);
-    this.y = rand.nextInt(ycmax);
-    a[x][y] = cow;
+    int randomNum1 = rand.nextInt(xmax);
+    randomNum1 = newx;
+    int randomNum2 = rand.nextInt(ymax);
+    randomNum2 = newy;
+    if (newx !> xmax && newy !> ymax && !a[x][y].instanceof Cow){
+      dealWithGrass(a);
+      x = newx;
+      y = newy;
+      a[x][y] = a.placeObject(x, y);
+    }
   }
-}
-    
+  }
