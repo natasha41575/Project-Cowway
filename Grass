@@ -21,3 +21,7 @@ public class Grass extends FarmObject{
 	public int getAmount(){
 		return amount;
 	}
+	
+	 public void remove(Farm a){
+		 a[x][y] = null;
+	 }
