@@ -6,5 +6,5 @@
 public class PoisonedGrass extends Grass{
   private int PoisonedGrass;
   public void increase(){
-    PoisonedGrass++
+    PoisonedGrass++;
     }
