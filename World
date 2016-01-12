@@ -7,11 +7,10 @@
 
 public class World{
 
- Farm[] allFarms;
- int hours; //time in hours => (military time, 12am = 0, 1am = 2 etc)
- private int[] change; //tells other classes if an hour has passed
- int count;
- int[] change;
+ private Farm[] allFarms;
+ private int hours; //time in hours => (military time, 12am = 0, 1am = 2 etc)
+ private int count;
+ private int[] change;
 
  public World(int numberOfFarms; int currentTime){
   this.hours = currentTime;
