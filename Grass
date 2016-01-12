@@ -7,17 +7,47 @@
 import java.util.*;
 public class Grass extends FarmObject{
 	private int amount;
-	public void doStuffForAnHour(){
-		amount++;
+	private int x;
+	private int y;
+	
+	public Grass(int x; int y; int amount){
+		this.x= x;
+		this.y = y;
+		this.amount = amount;
 	}
 	
-	public void RandomGrass(){
-		Random r = new Random();
-		int x = r.nextInt(25);
-		int y = r.nextInt(25);
-		if()
+	public void doStuffForAnHour(){
+		amount++;
+		if (chance()){
+			randomGrass();
+	}
+	
+	public boolean chance(){
+    		int c = 0.1 * amount;
+		Random rand = new Random();
+		int x = rand.nextInt(100);
+		if (c > x){ 
+			return true;
 		}
-		
+		else { 
+			return false;
+		}
+    	}
+ 
+ 	public void RandomGrass(){
+		int newx = x;
+		int newy = y;
+		Random rand = new Random();
+		int randomNum = rand.nextInt(3);
+		if (randomNum == 0) newx++;
+      		else if (randomNum == 1) newx--;
+      		else if (randomNum == 2) newy++;
+      		else newy--;
+    		if (newx !> xcmax && newy !> ycmax && !a[x][y].instanceof Cow){
+			Grass grass = new Grass(x, y, rand.nextInt(5));
+		}
+    	}
+  
 	public int getAmount(){
 		return amount;
 	}
