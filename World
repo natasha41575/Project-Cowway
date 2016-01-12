@@ -16,8 +16,6 @@ public class World{
  public World(int numberOfFarms; int currentTime){
   this.hours = currentTime;
   allFarms = new Farm[numberOfFarms];
-  int count = 0;
-  change = new int[2];
  }
  
  public void incrementTime(){
@@ -25,6 +23,5 @@ public class World{
   if (hours == 24){
    hours = 0;
   }
-  count++;
  }
 }
